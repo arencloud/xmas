@@ -57,19 +57,14 @@
 
     .page {
       padding: 64px 24px;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(214, 58, 74, 0.06),
-        rgba(214, 58, 74, 0.06) 12px,
-        rgba(16, 111, 93, 0.05) 12px,
-        rgba(16, 111, 93, 0.05) 24px
-      );
+      background: linear-gradient(135deg, #fef7f2 0%, #f3fff8 100%);
     }
 
     .page-inner {
       max-width: 960px;
       margin: 0 auto;
       text-align: center;
+      padding: 12px;
     }
 
     .card {
@@ -82,6 +77,7 @@
       padding: 56px 54px;
       border: 2px solid #e8d7b8;
       outline: 10px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
     }
 
     .header {
@@ -101,11 +97,25 @@
       letter-spacing: 0.04em;
     }
 
+    .illustration {
+      width: 220px;
+      height: 140px;
+      margin: 0 auto 12px;
+      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNDAgMTUwJz48cmVjdCByeD0nMTgnIHJ5PScxOCcgd2lkdGg9JzI0MCcgaGVpZ2h0PScxNTAnIGZpbGw9JyNmZWY2ZjAnLz48Y2lyY2xlIGN4PSc4NScgY3k9Jzc4JyByPSczOCcgZmlsbD0nI2U2Mzk0NicvPjxjaXJjbGUgY3g9JzEyMCcgY3k9JzcwJyByPSc0MicgZmlsbD0nI2U2Mzk0NicvPjxjaXJjbGUgY3g9JzE1MCcgY3k9JzgwJyByPSczNCcgZmlsbD0nI2U2Mzk0NicvPjxjaXJjbGUgY3g9JzExMCcgY3k9JzkwJyByPSczOCcgZmlsbD0nI2ZmZicvPjxjaXJjbGUgY3g9JzE0MCcgY3k9Jzk0JyByPSczMicgZmlsbD0nI2ZmZicvPjxjaXJjbGUgY3g9JzExOCcgY3k9JzcyJyByPScxOCcgZmlsbD0nI2ZmZicvPjxyZWN0IHg9JzYwJyB5PScxMDQnIHdpZHRoPScxMjAnIGhlaWdodD0nMTYnIHJ4PSc4JyBmaWxsPScjZjdkN2FmJy8+PHJlY3QgeD0nNzAnIHk9JzYwJyB3aWR0aD0nMTA4JyBoZWlnaHQ9JzEyJyByeD0nNicgZmlsbD0nI2Y3ZDdhZicvPjxjaXJjbGUgY3g9JzE3NicgY3k9JzYwJyByPSc5JyBmaWxsPScjZmZmJy8+PGNpcmNsZSBjeD0nMTgyJyBjeT0nNjYnIHI9JzknIGZpbGw9JyNmZmYnLz48cmVjdCB4PSc2OCcgeT0nNDAnIHdpZHRoPScxMDQnIGhlaWdodD0nMTYnIHJ4PSc4JyBmaWxsPScjYzAyNTJhJy8+PHJlY3QgeD0nODgnIHk9JzI2JyB3aWR0aD0nNjQnIGhlaWdodD0nMTgnIHJ4PSc5JyBmaWxsPScjYzAyNTJhJy8+PC9zdmc+") center center / contain no-repeat;
+    }
+
     .divider {
-      width: 140px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #c0252a, transparent);
-      margin: 12px auto 20px;
+      width: 220px;
+      height: 7px;
+      background: repeating-linear-gradient(
+        90deg,
+        #c0252a 0px,
+        #c0252a 6px,
+        transparent 6px,
+        transparent 12px
+      );
+      margin: 12px auto 22px;
+      border-radius: 999px;
     }
 
     .subline {
@@ -122,9 +132,9 @@
       margin: 0 auto 32px;
       max-width: 660px;
       padding: 16px 18px;
-      background: rgba(214, 58, 74, 0.06);
+      background: #fff8ef;
       border-radius: 12px;
-      border: 1px solid #e4c9b5;
+      border: 1px solid #f0d8c2;
     }
 
     .recipient {
@@ -163,6 +173,7 @@
       color: #106f5d;
       font-size: 0.95rem;
       letter-spacing: 0.01em;
+      padding-top: 6px;
     }
   </style>
 </head>
@@ -171,15 +182,16 @@
     <div class="page-inner">
       <div class="card">
         <div class="header">
-          <span class="badge">❄ Christmas & New Year ❄</span>
+          <span class="badge">❄ Christmas &amp; New Year ❄</span>
         </div>
         <h1>Merry Christmas</h1>
         <div class="subline">And a radiant New Year ahead</div>
+        <div class="illustration"></div>
         <div class="divider"></div>
-        <p class="recipient">{card.recipient}</p>
+        <p class="recipient">✶ {card.recipient}</p>
         <p class="message">{card.message}</p>
         <p class="signature">— <strong>{card.sender}</strong>, {card.year}</p>
-        <div class="footer-note">May the lights stay warm and the new year shine brightly for you.</div>
+        <div class="footer-note">May your season stay bright and your New Year arrive with joy and ease.</div>
       </div>
     </div>
   </div>
