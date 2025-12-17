@@ -31,13 +31,13 @@ public class WishFactory {
     );
 
     private static final List<String> DEFAULT_MESSAGES = List.of(
-        "Thank you for being part of this journey. Wishing you peace, joy, and a home full of laughter this festive season.",
-        "May your days be merry, bright, and filled with the people you love most.",
-        "Here's to cozy nights, sparkling lights, and memories that last all year.",
-        "May kindness find you, may joy surround you, and may the new year bring new adventures.",
-        "Your kindness has been a steady light this year. May your holidays be wrapped in warmth and your new year open with wonder.",
-        "Between the carols and cocoa, I hope you find quiet moments that remind you how loved you are.",
-        "May the glow of this season linger long after the lights come down, filling your days with hope and gentle joy."
+        "May your Christmas be wrapped in warmth, joy, and candlelight, and may the New Year greet you with fresh hope.",
+        "Here’s to sparkling lights, cozy nights, and a New Year filled with bright beginnings.",
+        "Snow-kissed days and fireside nights—may your holidays be merry and your New Year be bold and kind.",
+        "May peace rest on your home, laughter ring through your halls, and the coming year overflow with good surprises.",
+        "Thank you for being a light this year. Wishing you a Christmas full of comfort and a New Year full of courage.",
+        "Under twinkling trees and winter skies, may you feel how loved you are—today and all through the New Year.",
+        "Let joy find you in small moments now, and carry you into a generous, hope-filled year ahead."
     );
 
     public CardData buildCard(String recipient, String message, String sender, String year) {

@@ -51,12 +51,19 @@
       min-height: 100%;
       padding: 0;
       font-family: 'Work Sans', Arial, sans-serif;
-      background: linear-gradient(135deg, #0e2521 0%, #0b1b19 45%, #081212 100%);
+      background: linear-gradient(180deg, #fdf3f0 0%, #f6fff5 100%);
       color: #1f2a2e;
     }
 
     .page {
-      padding: 48px 18px;
+      padding: 64px 24px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(214, 58, 74, 0.06),
+        rgba(214, 58, 74, 0.06) 12px,
+        rgba(16, 111, 93, 0.05) 12px,
+        rgba(16, 111, 93, 0.05) 24px
+      );
     }
 
     .page-inner {
@@ -70,19 +77,19 @@
       width: 820px;
       max-width: 100%;
       margin: 0 auto;
-      background: linear-gradient(145deg, #ffffff 0%, #fdf7f7 50%, #f3fbf7 100%);
+      background: linear-gradient(145deg, #ffffff 0%, #fffaf4 55%, #f7fff8 100%);
       border-radius: 18px;
       padding: 56px 54px;
-      border: 1px solid #e4e8eb;
-      outline: 8px solid rgba(255, 255, 255, 0.35);
+      border: 2px solid #e8d7b8;
+      outline: 10px solid rgba(255, 255, 255, 0.55);
     }
 
     .header {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 0.18em;
       font-weight: 600;
-      color: #4a5a63;
+      color: #b02c2c;
       font-size: 0.9rem;
     }
 
@@ -90,15 +97,22 @@
       margin: 6px 0 12px;
       font-family: 'Playfair Display', 'Times New Roman', serif;
       font-size: 2.6rem;
-      color: #d63a4a;
+      color: #c0252a;
       letter-spacing: 0.04em;
     }
 
     .divider {
       width: 140px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, #d63a4a, transparent);
+      background: linear-gradient(90deg, transparent, #c0252a, transparent);
       margin: 12px auto 20px;
+    }
+
+    .subline {
+      margin: 4px 0 22px;
+      font-size: 1rem;
+      color: #106f5d;
+      letter-spacing: 0.04em;
     }
 
     .message {
@@ -108,9 +122,9 @@
       margin: 0 auto 32px;
       max-width: 660px;
       padding: 16px 18px;
-      background: rgba(230, 242, 239, 0.35);
+      background: rgba(214, 58, 74, 0.06);
       border-radius: 12px;
-      border: 1px solid #e4e8eb;
+      border: 1px solid #e4c9b5;
     }
 
     .recipient {
@@ -128,7 +142,7 @@
     }
 
     .signature strong {
-      color: #106f5d;
+      color: #b02c2c;
       font-weight: 700;
     }
 
@@ -136,12 +150,19 @@
       display: inline-block;
       padding: 6px 12px;
       border-radius: 999px;
-      background: #e6f2ef;
-      color: #106f5d;
+      background: #f8e8d8;
+      color: #b02c2c;
       font-weight: 600;
       letter-spacing: 0.03em;
       font-size: 0.9rem;
-      border: 1px solid #d2e6df;
+      border: 1px solid #e4c9b5;
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      color: #106f5d;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
     }
   </style>
 </head>
@@ -150,13 +171,15 @@
     <div class="page-inner">
       <div class="card">
         <div class="header">
-          <span class="badge">❄ Season of Joy ❄</span>
+          <span class="badge">❄ Christmas & New Year ❄</span>
         </div>
         <h1>Merry Christmas</h1>
+        <div class="subline">And a radiant New Year ahead</div>
         <div class="divider"></div>
         <p class="recipient">{card.recipient}</p>
         <p class="message">{card.message}</p>
         <p class="signature">— <strong>{card.sender}</strong>, {card.year}</p>
+        <div class="footer-note">May the lights stay warm and the new year shine brightly for you.</div>
       </div>
     </div>
   </div>
