@@ -13,7 +13,7 @@ import model.CardData;
 public class WishFactory {
 
     private static final List<String> DEFAULT_RECIPIENTS = List.of(
-        "Dear Friend",
+        "Dear Friends",
         "Dear Family",
         "To You and Yours",
         "Season's Greetings",
@@ -37,7 +37,19 @@ public class WishFactory {
         "May peace rest on your home, laughter ring through your halls, and the coming year overflow with good surprises.",
         "Thank you for being a light this year. Wishing you a Christmas full of comfort and a New Year full of courage.",
         "Under twinkling trees and winter skies, may you feel how loved you are—today and all through the New Year.",
-        "Let joy find you in small moments now, and carry you into a generous, hope-filled year ahead."
+        "Let joy find you in small moments now, and carry you into a generous, hope-filled year ahead.",
+        "May the scent of pine and the glow of hearth guide you into a New Year where every sunrise feels like a gift.",
+        "Here's to slow mornings, full hearts, and the kind of peace that follows you into every month ahead.",
+        "Wrapped in woolen scarves and kindness, may you find rest now and courage for the path the New Year opens.",
+        "May every star on your tree mirror a hope realized in the New Year, and may warmth linger long after the lights dim.",
+        "Here's to shared cocoa, remembered stories, and a New Year that makes room for your brightest dreams.",
+        "Sending you quiet moments of wonder, a table full of laughter, and a New Year that feels like fresh snowfall—soft and bright.",
+        "May your home be gentled by candlelight now and your year ahead be brave and bright.",
+        "Wishing you the hush of snowfall, the laughter of old friends, and a New Year that keeps that glow.",
+        "May kindness fill your table, gratitude fill your heart, and hope stretch into every month of the New Year.",
+        "Sending you wool-blanket coziness, cinnamon-scented evenings, and a New Year that answers long-held prayers.",
+        "Let every carol remind you you're cherished, and let the New Year greet you with doors flung open to joy.",
+        "May this season steady your spirit and the coming year surprise you with gentle, radiant things."
     );
 
     public CardData buildCard(String recipient, String message, String sender, String year) {
