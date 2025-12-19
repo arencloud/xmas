@@ -22,6 +22,7 @@ public class Application extends Controller {
     @CheckedTemplate
     public static class Templates {
         public static native TemplateInstance christmasCard(CardData card);
+        public static native TemplateInstance christmasCardShimmer(CardData card);
     }
 
     @GET
@@ -42,5 +43,25 @@ public class Application extends Controller {
                                               @QueryParam("sender") String sender,
                                               @QueryParam("year") String year) {
         return Templates.christmasCard(wishFactory.buildCard(recipient, message, sender, year));
+    }
+
+    @GET
+    @Path("/christmasShimmerPngCard")
+    @Produces(Pdf.IMAGE_PNG)
+    public TemplateInstance christmasCardShimmerPng(@QueryParam("recipient") String recipient,
+                                                    @QueryParam("message") String message,
+                                                    @QueryParam("sender") String sender,
+                                                    @QueryParam("year") String year) {
+        return Templates.christmasCardShimmer(wishFactory.buildCard(recipient, message, sender, year));
+    }
+
+    @GET
+    @Path("/christmasShimmerHtmlCard")
+    @Produces(MediaType.TEXT_HTML)
+    public TemplateInstance christmasCardShimmerHTML(@QueryParam("recipient") String recipient,
+                                                     @QueryParam("message") String message,
+                                                     @QueryParam("sender") String sender,
+                                                     @QueryParam("year") String year) {
+        return Templates.christmasCardShimmer(wishFactory.buildCard(recipient, message, sender, year));
     }
 }
